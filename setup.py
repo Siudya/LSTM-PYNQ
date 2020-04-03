@@ -58,3 +58,5 @@ setup(
 if os.path.isdir(os.environ["PYNQ_JUPYTER_NOTEBOOKS"]+"/lstm/"):
 	shutil.rmtree(os.environ["PYNQ_JUPYTER_NOTEBOOKS"]+"/lstm/")
 shutil.copytree("notebooks/",os.environ["PYNQ_JUPYTER_NOTEBOOKS"]+"/lstm/")
+if not os.path.exists('/usr/lib/libsds_lib.so')
+	shutil.copyfile('lstm/libraries/libsds_lib.so','/usr/lib/libsds_lib.so')
